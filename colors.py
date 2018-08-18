@@ -22,7 +22,7 @@ import logging
 class ColoredFormatter(logging.Formatter):
     def format(self, record):
         if record.levelno == logging.CRITICAL:
-            record.levelname = (f"\033[38;5;255;1m\033[41;1m   {record.levelname} \033[0m")
+            record.levelname = (f"\033[38;5;255;1m\033[41;1m  {record.levelname}  \033[0m")
         elif record.levelno == logging.ERROR:
             record.levelname = f"\033[91;1m\033[40m    {record.levelname}   \033[0m"
         elif record.levelno == logging.WARNING:
